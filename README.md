@@ -2,6 +2,7 @@
 
 This project demonstrates a 3D autonomous drone navigation system that leverages **deep learning**, **reinforcement learning**, and **heuristic search** to plan optimal flight paths while avoiding obstacles. It combines AI-powered decision-making with real-time visualization and user-friendly interfaces like a Telegram bot.
 
+
 Objective
 
 The goal of this project is to design a drone path planner that can:
@@ -29,9 +30,11 @@ Technologies & Tools
 | User Interface           | Telegram Bot Integration                                                                              |
 | Deployment               | Local Python environment                                                                              |
 
+
 Folder Structure
 
 drone-path-planning/
+
 ├── drone_path_planner.py          # 3D environment and BFS path planner
 
 ├── environment.py                 # Obstacle setup & collision detection
@@ -48,43 +51,43 @@ drone-path-planning/
 
 
 Installation & Setup
-Requirements: 
-             Python 3.10+
 
-Install dependencies : 
-             pip install numpy matplotlib tensorflow python-telegram-bot nest_asyncio
+Requirements: Python 3.10+
 
-Run the simulation : 
-             python drone_path_planner.py
+Install dependencies : pip install numpy matplotlib tensorflow python-telegram-bot nest_asyncio
 
-Start Telegram Bot :
-Edit telegram_bot.py and replace:
-              TOKEN = "YOUR_BOT_TOKEN"
-Then run:
-              python telegram_bot.py
+Run the simulation :  python drone_path_planner.py
+
+Start Telegram Bot 
+
+Edit telegram_bot.py and replace: TOKEN = "YOUR_BOT_TOKEN"
+
+Then run: python telegram_bot.py
 
 Algorithms Used
-1. Sequential_9 Model : 
-           A deep neural network trained to predict movement directions using environmental states. Features include:
+1. Sequential_9 Model : A deep neural network trained to predict movement directions using environmental states.
+   
+2. Features include:
            3 hidden layers with ReLU
            Dropout for regularization
            Tanh activation for normalized direction vector output
 
-2. Priority Queue + Heuristic Search
+3. Priority Queue + Heuristic Search
             Used for path planning with direction prioritization based on distance to goal.
 
-3. Deep Q-Network (DQN)
+4. Deep Q-Network (DQN)
             Reinforcement learning model integrated for continuous learning and improvement in   obstacle avoidance.
 
-4. Obstacle Collision Detection
+5. Obstacle Collision Detection
             Calculates minimum distance to all known obstacles in 3D using Euclidean distance.
 
-5. Path Analysis
+6. Path Analysis
     Path length vs. straight-line distance
     Path efficiency
     Obstacle clearance
 
 Testing the Planner
+
 1. Set up obstacle coordinates manually or allow random generation.
 2. Run the planner script.
 3. The system checks for collisions and computes an optimal route.
