@@ -86,6 +86,7 @@ Testing the Planner
      /start_goal 0,0,0 49,49,29
 
 📊 Sample Output
+
 Path Analysis : 
     Total path length: 75.18 units
     Straight-line distance: 75.12 units
@@ -93,12 +94,14 @@ Path Analysis :
     Minimum distance to obstacles: 9.16 units
 
 🧭 Project Flow Diagram
+
 You can upload these in /images/ folder and reference here:
     Architecture Diagram: images/architecture.png
     Sequence Diagram: images/sequence.png
     Use Case: images/usecase.png
 
 👥 Team Members
+
 Batta Layasri
 Sommisetti Leelavathi
 Sriram V V V N S M Praneeta
@@ -106,11 +109,13 @@ Kavitha Mamidala
 Mannem Sudheshna
 
 Institution
+
 St. Ann’s College of Engineering & Technology
 CSE - Artificial Intelligence & Machine Learning
 JNTU Kakinada | Batch 2021–2025
 
 Future Work 
+
 Improve dynamic obstacle prediction using LSTM
 Implement energy-aware planning (battery-aware routing)
 Swarm drone coordination via multi-agent RL
