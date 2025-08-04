@@ -50,19 +50,21 @@ drone-path-planning/
 ├── drone_path.mp4                 # Demo video
 
 
+
 Installation & Setup
 
-Requirements: Python 3.10+
+Requirements:   Python 3.10+
 
-Install dependencies : pip install numpy matplotlib tensorflow python-telegram-bot nest_asyncio
+Install dependencies :   pip install numpy matplotlib tensorflow python-telegram-bot nest_asyncio
 
-Run the simulation :  python drone_path_planner.py
+Run the simulation :    python drone_path_planner.py
 
 Start Telegram Bot 
 
-Edit telegram_bot.py and replace: TOKEN = "YOUR_BOT_TOKEN"
+Edit telegram_bot.py and replace:    TOKEN = "YOUR_BOT_TOKEN"
 
-Then run: python telegram_bot.py
+Then run:     python telegram_bot.py
+
 
 Algorithms Used
 1. Sequential_9 Model : A deep neural network trained to predict movement directions using environmental states.
@@ -86,6 +88,7 @@ Algorithms Used
     Path efficiency
     Obstacle clearance
 
+
 Testing the Planner
 
 1. Set up obstacle coordinates manually or allow random generation.
@@ -95,6 +98,7 @@ Testing the Planner
 5. Telegram bot allows interactive command like:
      /start_goal 0,0,0 49,49,29
 
+
 📊 Sample Output
 
 Path Analysis : 
@@ -103,12 +107,14 @@ Path Analysis :
     Path efficiency: 99.92%
     Minimum distance to obstacles: 9.16 units
 
+
 🧭 Project Flow Diagram
 
 You can upload these in /images/ folder and reference here:
     Architecture Diagram: images/architecture.png
     Sequence Diagram: images/sequence.png
     Use Case: images/usecase.png
+
 
 
 👥 Team Members
@@ -124,6 +130,7 @@ Kavitha Mamidala
 Mannem Sudheshna
 
 
+
 Institution
 
 St. Ann’s College of Engineering & Technology
@@ -131,6 +138,7 @@ St. Ann’s College of Engineering & Technology
 CSE - Artificial Intelligence & Machine Learning
 
 JNTU Kakinada | Batch 2021–2025
+
 
 
 Future Work 
