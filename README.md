@@ -92,9 +92,13 @@ Algorithms Used
 Testing the Planner
 
 1. Set up obstacle coordinates manually or allow random generation.
+   
 2. Run the planner script.
+   
 3. The system checks for collisions and computes an optimal route.
+   
 4. The drone's trajectory is visualized in a 3D plot.
+   
 5. Telegram bot allows interactive command like:
      /start_goal 0,0,0 49,49,29
 
@@ -102,17 +106,24 @@ Testing the Planner
 📊 Sample Output
 
 Path Analysis : 
+
     Total path length: 75.18 units
+    
     Straight-line distance: 75.12 units
+    
     Path efficiency: 99.92%
+    
     Minimum distance to obstacles: 9.16 units
 
 
 🧭 Project Flow Diagram
 
 You can upload these in /images/ folder and reference here:
+
     Architecture Diagram: images/architecture.png
+    
     Sequence Diagram: images/sequence.png
+    
     Use Case: images/usecase.png
 
 
