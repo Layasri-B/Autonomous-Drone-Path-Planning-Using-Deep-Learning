@@ -33,12 +33,19 @@ Folder Structure
 
 drone-path-planning/
 ├── drone_path_planner.py          # 3D environment and BFS path planner
+
 ├── environment.py                 # Obstacle setup & collision detection
+
 ├── model_training.py              # Deep learning model training
+
 ├── telegram_bot.py                # Telegram bot for interactive input
+
 ├── visualize.py                   # Path visualization
+
 ├── final.pdf                      # Project documentation
+
 ├── drone_path.mp4                 # Demo video
+
 
 Installation & Setup
 Requirements: 
@@ -100,23 +107,35 @@ You can upload these in /images/ folder and reference here:
     Sequence Diagram: images/sequence.png
     Use Case: images/usecase.png
 
+
 👥 Team Members
 
 Batta Layasri
+
 Sommisetti Leelavathi
+
 Sriram V V V N S M Praneeta
+
 Kavitha Mamidala
+
 Mannem Sudheshna
+
 
 Institution
 
 St. Ann’s College of Engineering & Technology
+
 CSE - Artificial Intelligence & Machine Learning
+
 JNTU Kakinada | Batch 2021–2025
+
 
 Future Work 
 
 Improve dynamic obstacle prediction using LSTM
+
 Implement energy-aware planning (battery-aware routing)
+
 Swarm drone coordination via multi-agent RL
+
 ROS and AirSim integration for real-time deployment
