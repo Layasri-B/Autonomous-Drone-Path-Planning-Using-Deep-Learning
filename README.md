@@ -1,4 +1,4 @@
-# Autonomous-Drone-Path-Planning-Using-Deep-LearningAutonomous-Drone-Path-Planning-Using-Deep-Learning
+# Autonomous-Drone-Path-Planning-Using-Deep-Learning
 
 This project demonstrates a 3D autonomous drone navigation system that leverages **deep learning**, **reinforcement learning**, and **heuristic search** to plan optimal flight paths while avoiding obstacles. It combines AI-powered decision-making with real-time visualization and user-friendly interfaces like a Telegram bot.
 
