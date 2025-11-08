@@ -190,6 +190,6 @@ With further integration of real-time detection and reinforcement learning, this
 ---
 
 ## 👩‍💻 **Developed By**
-**S. Leelavathi**  
+**B. Layasri**  
 Department of CSE (AI & ML)  
 St. Ann’s College of Engineering & Technology  
