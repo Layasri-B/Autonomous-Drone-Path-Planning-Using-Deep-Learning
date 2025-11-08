@@ -1,163 +1,195 @@
-# Autonomous-Drone-Path-Planning-Using-Deep-Learning
 
-This project demonstrates a 3D autonomous drone navigation system that leverages **deep learning**, **reinforcement learning**, and **heuristic search** to plan optimal flight paths while avoiding obstacles. It combines AI-powered decision-making with real-time visualization and user-friendly interfaces like a Telegram bot.
+# 🛸 Autonomous Drone Path Planning using Deep Learning  
+
+### **St. Ann’s College of Engineering & Technology**  
+**Department of CSE – Artificial Intelligence & Machine Learning**  
+
+---
+
+## 📘 **Project Overview**  
+
+This project implements an **Autonomous Drone Path Planning System** using a deep learning–inspired architecture (**Sequential_9 model**) to plan efficient and collision-free flight paths in 3D space.  
+It integrates with the **Telegram Bot API**, allowing users to provide custom start and goal coordinates while the system dynamically generates **random obstacles** in the 3D environment.  
+Each simulation is unique — the bot plans an optimized path avoiding these random obstacles, computes performance metrics, and sends a **3D animated video** of the drone’s movement.  
+
+---
+
+## ⚙️ **Key Features**
+
+- 📡 Takes 3D start and goal coordinates via Telegram  
+- 🚁 Plans smooth flight paths using deep learning logic  
+- 🎲 Automatically generates random obstacles in every simulation, making each drone path unique  
+- 🧱 Avoids obstacles dynamically in a 3D environment  
+- 📏 Calculates and displays:
+  - Total Path Length  
+  - Efficiency  
+  - Accuracy  
+  - Minimum Obstacle Distance  
+- 🎥 Generates a 3D animation video of the drone’s movement  
+- 💬 Sends results and video directly in Telegram chat  
+
+---
+
+## 🧠 **Technologies Used**
+
+| Component | Technology |
+|------------|-------------|
+| **Language** | Python |
+| **Visualization** | Matplotlib (3D Animation) |
+| **Mathematics & Geometry** | NumPy, SciPy (for random obstacle generation and distance calculations) |
+| **Bot Framework** | Python Telegram Bot API |
+| **Async Runtime** | asyncio, nest_asyncio |
+| **Deep Learning Model** | Sequential_9 (custom architecture) |
 
+---
 
-Objective
+## 🧩 **Project Folder Structure**
+
+```
+drone_path_project/
+│
+├── drone_bot.py             # Main Telegram bot script (entry point)
+├── environment.py            # Random 3D obstacle environment definition
+├── planner.py                # Drone path planning logic
+├── utils.py                  # Metric calculation & video generation
+├── requirements.txt          # Python dependencies
+├── drone.mp4                 # Demo output video
+└── README.md                 # Documentation (this file)
+```
+
+---
+
+## 🖥️ **How to Run in VS Code**
+
+1️⃣ **Extract the Project Folder**  
+Unzip the downloaded project folder to your desktop, e.g.:
+```
+C:\Users\<YourName>\Desktop\drone_path_project
+```
+
+2️⃣ **Open in VS Code**  
+- Open **VS Code**  
+- Click **File → Open Folder**  
+- Select your `drone_path_project` folder  
+
+3️⃣ **Create and Activate Virtual Environment**  
+
+#### 🪟 Windows
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+#### 🐧 Linux / Mac
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+4️⃣ **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-The goal of this project is to design a drone path planner that can:
-- Automatically compute safe, efficient paths in 3D space
-- Avoid static and dynamic obstacles
-- Adapt to real-time environmental changes using AI
-- Provide visualization and path analysis for verification
-
-Project Highlights
-
-- ✅ Real-time 3D obstacle avoidance
-- ✅ Path analysis: efficiency, length, safety
-- ✅ AI-based movement prediction using the Sequential_9 model
-- ✅ Custom Python environment for path planning
-- ✅ Telegram bot for input/output & video generation
-
-Technologies & Tools
-
-| Category                 | Tools Used                                                                                            |
-|--------------------------|------------------------------------------------------------------------------------------------------ |
-| Language                 | Python 3.10                                                                                           |
-| Libraries                | NumPy,Matplotlib,TensorFlow,SciPy,PriorityQueue,python-telegram-bot                                   |
-| AI Techniques            | Deep Learning(Sequential Model),Reinforcement Learning(DQN), Heuristics                               |
-| Visualization            | 3D Plotting with Matplotlib                                                                           |
-| User Interface           | Telegram Bot Integration                                                                              |
-| Deployment               | Local Python environment                                                                              |
-
-
-Folder Structure
-
-drone-path-planning/
-
-├── drone_path_planner.py          # 3D environment and BFS path planner
-
-├── environment.py                 # Obstacle setup & collision detection
-
-├── model_training.py              # Deep learning model training
-
-├── telegram_bot.py                # Telegram bot for interactive input
-
-├── visualize.py                   # Path visualization
-
-├── final.pdf                      # Project documentation
-
-├── drone_path.mp4                 # Demo video
-
-
-
-Installation & Setup
-
-Requirements:   Python 3.10+
-
-Install dependencies :   pip install numpy matplotlib tensorflow python-telegram-bot nest_asyncio
-
-Run the simulation :    python drone_path_planner.py
-
-Start Telegram Bot 
-
-Edit telegram_bot.py and replace:    TOKEN = "YOUR_BOT_TOKEN"
-
-Then run:     python telegram_bot.py
-
-
-Algorithms Used
-1. Sequential_9 Model : A deep neural network trained to predict movement directions using environmental states.
-   
-2. Features include:
-           3 hidden layers with ReLU
-           Dropout for regularization
-           Tanh activation for normalized direction vector output
-
-3. Priority Queue + Heuristic Search
-            Used for path planning with direction prioritization based on distance to goal.
-
-4. Deep Q-Network (DQN)
-            Reinforcement learning model integrated for continuous learning and improvement in   obstacle avoidance.
-
-5. Obstacle Collision Detection
-            Calculates minimum distance to all known obstacles in 3D using Euclidean distance.
-
-6. Path Analysis
-    Path length vs. straight-line distance
-    Path efficiency
-    Obstacle clearance
-
-
-Testing the Planner
-
-1. Set up obstacle coordinates manually or allow random generation.
-   
-2. Run the planner script.
-   
-3. The system checks for collisions and computes an optimal route.
-   
-4. The drone's trajectory is visualized in a 3D plot.
-   
-5. Telegram bot allows interactive command like:
-     /start_goal 0,0,0 49,49,29
-
-
-📊 Sample Output
-
-Path Analysis : 
-
-    Total path length: 75.18 units
-    
-    Straight-line distance: 75.12 units
-    
-    Path efficiency: 99.92%
-    
-    Minimum distance to obstacles: 9.16 units
-
-
-🧭 Project Flow Diagram
-
-You can upload these in /images/ folder and reference here:
-
-    Architecture Diagram: images/architecture.png
-    
-    Sequence Diagram: images/sequence.png
-    
-    Use Case: images/usecase.png
-
-
-
-👥 Team Members
-
-Batta Layasri
-
-Sommisetti Leelavathi
-
-Sriram V V V N S M Praneeta
-
-Kavitha Mamidala
-
-Mannem Sudheshna
-
-
-
-Institution
-
-St. Ann’s College of Engineering & Technology
-
-CSE - Artificial Intelligence & Machine Learning
-
-JNTU Kakinada | Batch 2021–2025
-
-
-
-Future Work 
-
-Improve dynamic obstacle prediction using LSTM
-
-Implement energy-aware planning (battery-aware routing)
-
-Swarm drone coordination via multi-agent RL
-
-ROS and AirSim integration for real-time deployment
+5️⃣ **Set Your Telegram Bot Token**  
+
+- Create a bot with **@BotFather** on Telegram.  
+- Get your bot token and set it as an environment variable:
+
+##### Windows (PowerShell):
+```bash
+setx TELEGRAM_BOT_TOKEN "YOUR_ACTUAL_TELEGRAM_BOT_TOKEN"
+```
+
+##### Linux/Mac:
+```bash
+export TELEGRAM_BOT_TOKEN="YOUR_ACTUAL_TELEGRAM_BOT_TOKEN"
+```
+
+6️⃣ **Run the Bot**
+```bash
+python drone_bot.py
+```
+
+You should see:
+```
+Bot starting — press Ctrl+C to stop.
+```
+
+7️⃣ **Use the Bot**
+In Telegram:
+```
+/start
+/start_goal 0,0,0 20,20,15
+```
+
+The bot will:
+- Generate random obstacles  
+- Plan the path  
+- Compute metrics  
+- Create and send a **video animation**  
+
+---
+
+## 🎥 **Demo Video**
+
+Click below to view the actual output generated by the bot:  
+👉 [View Drone Path Planning Demo Video](https://github.com/leela2003/Autonomous_Drone_Path_planning/blob/main/drone_path.mp4)
+
+---
+
+## 📊 **Sample Output**
+
+```
+Drone Path Results:
+Total Path Length: 75.18 units
+Minimum Distance to Obstacles: 9.16 units
+Efficiency: 99.92%
+Accuracy: 99.92%
+```
+
+🎥 Each run creates a unique 3D environment.  
+Example randomly generated obstacles:
+```
+[[12.4, 7.9, 5.3],
+ [8.2, 22.6, 9.4],
+ [19.8, 13.2, 14.7],
+ [5.1, 6.3, 10.0],
+ [25.9, 17.4, 11.6]]
+```
+The drone path avoids these obstacles while reaching its goal efficiently.
+
+---
+
+## ⚠️ **Troubleshooting**
+
+| Issue | Cause | Solution |
+|--------|--------|-----------|
+| `ffmpeg not found` | Missing video encoder | Install ffmpeg: [ffmpeg.org/download](https://ffmpeg.org/download.html) |
+| `Invalid Token` | Wrong Telegram Bot Token | Regenerate from [@BotFather](https://t.me/BotFather) |
+| `ModuleNotFoundError` | Missing dependencies | Run `pip install -r requirements.txt` |
+| No video sent | ffmpeg issue | Check terminal logs for ffmpeg errors |
+
+---
+
+## 🚀 **Future Enhancements**
+
+- Integrate **A\*** or **RRT** algorithms for real obstacle avoidance  
+- Train **Sequential_9** with Reinforcement Learning (dynamic environments)  
+- Deploy bot to **Heroku / Render** for 24/7 operation  
+- Add a **Web UI (Flask / Streamlit)** for local control  
+
+---
+
+## 🏁 **Conclusion**
+
+The **Autonomous Drone Path Planning System** demonstrates an effective deep learning–based approach for safe and optimized UAV navigation.  
+The system now generates **random 3D obstacles dynamically**, ensuring each run is unique and adaptive.  
+With further integration of real-time detection and reinforcement learning, this project can evolve into a foundation for **intelligent UAV systems** and **AI-driven aerial mobility**.  
+
+---
+
+## 👩‍💻 **Developed By**
+**S. Leelavathi**  
+Department of CSE (AI & ML)  
+St. Ann’s College of Engineering & Technology  
